@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="第一次使用markdown，感觉真香哎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown初体验">
+<meta property="og:url" content="http://yoursite.com/posts/a675233b/index.html">
+<meta property="og:site_name" content="啊哈的博客">
+<meta property="og:description" content="第一次使用markdown，感觉真香哎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/956400925abfcde09279c249810321e9bdbb4d9a.jpg@1320w_826h.webp">
+<meta property="article:published_time" content="2020-08-19T03:12:04.000Z">
+<meta property="article:modified_time" content="2020-08-20T00:49:55.476Z">
+<meta property="article:author" content="啊哈">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="markdown语法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i0.hdslb.com/bfs/article/956400925abfcde09279c249810321e9bdbb4d9a.jpg@1320w_826h.webp">
+
+<link rel="canonical" href="http://yoursite.com/posts/a675233b/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" type="text/css" href="/css/injector.css" />
+  <title>markdown初体验 | 啊哈的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="啊哈的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">啊哈的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">来者是客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/f-s2" class="github-corner" title="欢迎访问" aria-label="欢迎访问" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/a675233b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="啊哈">
+      <meta itemprop="description" content="无法舍弃任何东西的人，也就无法改变任何事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="啊哈的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          markdown初体验
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-19 11:12:04" itemprop="dateCreated datePublished" datetime="2020-08-19T11:12:04+08:00">2020-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-20 08:49:55" itemprop="dateModified" datetime="2020-08-20T08:49:55+08:00">2020-08-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/markdown/" itemprop="url" rel="index"><span itemprop="name">markdown</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/a675233b/" class="post-meta-item leancloud_visitors" data-flag-title="markdown初体验" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/a675233b/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/a675233b/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>第一次使用markdown，感觉真香哎</p>
+<a id="more"></a>
+
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>兼容html、css语法</li>
+<li>特殊字符自动转换<ul>
+<li>如：<code>&amp;copy;</code>会变成&copy;</li>
+</ul>
+</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><blockquote>
+<p><strong>在使用markdown语法时，需要在语法符号后面打个空格</strong></p>
+</blockquote>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p><strong>越往后越小</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><p><strong>使用两个相同符号将文本包裹即可</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体1*</span> <span class="emphasis">_斜体2_</span></span><br><span class="line"><span class="strong">**粗体1**</span> <span class="strong">__粗体2__</span></span><br><span class="line">~~ 删除线 ~~</span><br><span class="line">==高亮==</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><em>斜体1</em> <em>斜体2</em><br><strong>粗体1</strong> <strong>粗体2</strong><br><del>删除线</del></p>
+<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p><strong>脚注自动被搬运到最后面，请到文章末尾查看，并且脚注后方的链接可以直接跳转回到加注的地方</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">^1</span>]:<span class="link">脚注1</span></span><br><span class="line">[<span class="symbol">^T</span>]:<span class="link">脚注T</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><strong>当混合使用时，中间会出现大量空白</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">有序列表</span><br><span class="line">1.有序</span><br><span class="line">2.有序</span><br><span class="line"></span><br><span class="line">无序列表</span><br><span class="line"><span class="bullet">*</span> 无序</span><br><span class="line"><span class="bullet">-</span> 无序</span><br><span class="line"><span class="bullet">+</span> 无序</span><br></pre></td></tr></table></figure>
+
+<p>有序列表</p>
+<ol>
+<li>有序</li>
+<li>有序</li>
+</ol>
+<p>无序列表</p>
+<ul>
+<li>无序 *</li>
+</ul>
+<ul>
+<li>无序 -</li>
+</ul>
+<ul>
+<li>无序 +</li>
+</ul>
+<h3 id="区域块"><a href="#区域块" class="headerlink" title="区域块"></a>区域块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 引用</span></span><br><span class="line"><span class="code">`内嵌代码`</span></span><br><span class="line"></span><br><span class="line">​<span class="code">```多行代码```</span></span><br><span class="line">或者<span class="code">```加一个回车键</span></span><br><span class="line"><span class="code">或者```&lt;代码类型&gt;加一个回车键</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这是引用</p>
+</blockquote>
+<p><code>这是内嵌代码</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是多行代码</span><br></pre></td></tr></table></figure>
+
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p><strong>三个及以上相同符号（除了空格外行内不能有其它元素）</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">****</span></span><br><span class="line"><span class="bullet">*</span> <span class="emphasis">* *</span></span><br><span class="line"><span class="bullet">-</span> - -</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这是分隔线</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">大致模板：</span><br><span class="line">鼠标提示可不使用，使用时前面记得留个空格</span><br><span class="line">[<span class="string">所展示的名字</span>](<span class="link">url &quot;鼠标悬停时的提示&quot;</span>)</span><br><span class="line"></span><br><span class="line">[<span class="string">bilibili</span>](<span class="link">https://www.bilibili.com/ &quot;这是B站的链接&quot;</span>)</span><br><span class="line"></span><br><span class="line">进阶版：</span><br><span class="line">[<span class="symbol">id</span>]: <span class="link">url &quot;xxx&quot;  在任意位置定义（：后需要留空格）</span></span><br><span class="line">[<span class="string">bilibili2</span>][<span class="symbol">id</span>]  需要使用时拿来即用</span><br><span class="line"></span><br><span class="line">自动链接:</span><br><span class="line">将文本视作url链接</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">url</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/" title="这是B站的链接">bilibili</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.bilibili.com/" title="这是B站链接">bilibili2</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://bilibili.com/">http://bilibili.com</a></p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><ul>
+<li><p><strong>直接拖进去自动生成</strong></p>
+</li>
+<li><p><strong><em>手动输入</em> 与链接用法几乎一致，只是前面多了”!”</strong></p>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片替代文本</span>](<span class="link">url &quot;鼠标停留时的提示&quot;</span>)</span><br><span class="line"></span><br><span class="line">[<span class="symbol">id</span>]: <span class="link">url &quot;xxx&quot;</span></span><br><span class="line">![<span class="string">text</span>][<span class="symbol">id</span>]</span><br><span class="line"></span><br><span class="line">网络图片：</span><br><span class="line">![<span class="string">img</span>](<span class="link">https://i0.hdslb.com/bfs/article/956400925abfcde09279c249810321e9bdbb4d9a.jpg@1320w_826h.webp &#x27;阿库娅&#x27;</span>)</span><br><span class="line"></span><br><span class="line">本地图片：</span><br><span class="line">![<span class="string">img</span>](<span class="link">E:/Desktop/akuya.jpg &#x27;阿库娅&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="https://i0.hdslb.com/bfs/article/956400925abfcde09279c249810321e9bdbb4d9a.jpg@1320w_826h.webp" alt="图片" title="阿库娅" style="zoom: 25%;" />
+
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><strong>原生有点麻烦，不如直接右键插入表格</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一行为各个列的表名称。第二行为下面内容的对齐方式，使用：进行标记。两个冒号加上减号 (-) 表示居中，减号后面是：表示居右，默认居左</span><br><span class="line"></span><br><span class="line">| cloth         | price         |color  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| 衣服           | 16R     | 红 |</span><br><span class="line">| 裤子           | 6R      |   蓝 |</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>cloth</th>
+<th align="center">price</th>
+<th align="right">color</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>衣服</td>
+<td align="center">16R</td>
+<td align="right">红</td>
+</tr>
+<tr>
+<td>裤子</td>
+<td align="center">6R</td>
+<td align="right">蓝</td>
+</tr>
+</tbody></table>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="使用时自动给目录标题添加序号"><a href="#使用时自动给目录标题添加序号" class="headerlink" title="使用时自动给目录标题添加序号"></a>使用时自动给目录标题添加序号</h3><ul>
+<li>打开 文件 -&gt; 偏好设置 -&gt; 外观 -&gt; 主题文件夹</li>
+<li>创建 base.user.css 文件</li>
+<li>将以下代码粘贴进去即可</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 正文标题区: #write */</span></span><br><span class="line"><span class="comment">/* [TOC]目录树区: .md-toc-content */</span></span><br><span class="line"><span class="comment">/* 侧边栏的目录大纲区: .sidebar-content */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/** initialize css counter */</span></span><br><span class="line"><span class="selector-id">#write</span>, <span class="selector-class">.sidebar-content</span>,<span class="selector-class">.md-toc-content</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span>, <span class="selector-class">.outline-h1</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h1</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span>, <span class="selector-class">.outline-h2</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h2</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h3</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span>, <span class="selector-class">.outline-h3</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h3</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span>, <span class="selector-class">.outline-h4</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h4</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h5</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span>, <span class="selector-class">.outline-h5</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h5</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h6</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** put counter result into headings */</span></span><br><span class="line"><span class="comment">/* 一级标题不展示 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h1</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h1</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="comment">/* counter-increment: h1;</span></span><br><span class="line"><span class="comment">    content: counter(h1) &quot;. &quot; */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 二级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h2</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h2</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h2;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.   &quot;</span>;</span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;. &quot; */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 三级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>, <span class="comment">/** override the default style for focused headings */</span></span><br><span class="line"><span class="selector-class">.outline-h3</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h3</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h3;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 四级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h4</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h4</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h4;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 五级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h5</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h5</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h5;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h5) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 六级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h6</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h6</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h6</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h6;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;.&quot; counter(h6) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;.&quot; counter(h6) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h5) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h6) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** override the default style for focused headings */</span></span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: inherit;</span><br><span class="line">    <span class="attribute">border</span>: inherit;</span><br><span class="line">    <span class="attribute">border-radius</span>: inherit;</span><br><span class="line">    <span class="attribute">position</span>: inherit;</span><br><span class="line">    <span class="attribute">left</span>:initial;</span><br><span class="line">    <span class="attribute">float</span>: none;</span><br><span class="line">    <span class="attribute">top</span>:initial;</span><br><span class="line">    <span class="attribute">font-size</span>: inherit;</span><br><span class="line">    <span class="attribute">padding-left</span>: inherit;</span><br><span class="line">    <span class="attribute">padding-right</span>: inherit;</span><br><span class="line">    <span class="attribute">vertical-align</span>: inherit;</span><br><span class="line">    <span class="attribute">font-weight</span>: inherit;</span><br><span class="line">    <span class="attribute">line-height</span>: inherit;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置行距 */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置一级标题行距 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>啊哈
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/posts/a675233b/" title="markdown初体验">http://yoursite.com/posts/a675233b/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/markdown%E8%AF%AD%E6%B3%95/" rel="tag"># markdown语法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/4a17b156/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/fdb29852/" rel="next" title="next的配置记录">
+      next的配置记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC"><span class="nav-number">2.2.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%B3%A8"><span class="nav-number">2.3.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">2.4.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%9F%9F%E5%9D%97"><span class="nav-number">2.5.</span> <span class="nav-text">区域块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="nav-number">2.6.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-number">2.7.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">2.8.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">2.9.</span> <span class="nav-text">表格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%97%B6%E8%87%AA%E5%8A%A8%E7%BB%99%E7%9B%AE%E5%BD%95%E6%A0%87%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">使用时自动给目录标题添加序号</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="啊哈"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">啊哈</p>
+  <div class="site-description" itemprop="description">无法舍弃任何东西的人，也就无法改变任何事</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/f-s2" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;f-s2" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+    <div class="links-of-blogroll motion-element links-of-blogroll-block">
+      <div class="links-of-blogroll-title">
+        <!-- modify icon to fire by szw -->
+        <i class="fa fa-history fa-" aria-hidden="true"></i>
+        近期文章
+      </div>
+      <ul class="links-of-blogroll-list">
+        
+        
+          <li>
+            <a href="/posts/fdb29852/" title="next的配置记录" target="_blank">next的配置记录</a>
+          </li>
+        
+          <li>
+            <a href="/posts/a675233b/" title="markdown初体验" target="_blank">markdown初体验</a>
+          </li>
+        
+          <li>
+            <a href="/posts/4a17b156/" title="Hello World" target="_blank">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">啊哈</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">21 分钟</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '1UDkCIjzxRCxC9uuGFxXfIYD-gzGzoHsz',
+      appKey     : 'AcegyxGdwHH6WatL663tUhMC',
+      placeholder: "来搞点事情吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true# Article reading statistic,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+<div class="moon-menu">
+  <div class="moon-menu-items">
+    
+    <div class="moon-menu-item" onclick="back2bottom()">
+      <i class='fa fa-chevron-down'></i>    </div>
+    
+    <div class="moon-menu-item" onclick="back2top()">
+      <i class='fa fa-chevron-up'></i>    </div>
+    
+  </div>
+  <div class="moon-menu-button">
+    <svg class="moon-menu-bg">
+      <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+      <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+    </svg>
+    <div class="moon-menu-content">
+      <div class="moon-menu-icon"><i class='fas fa-ellipsis-v'></i></div>
+      <div class="moon-menu-text"></div>
+    </div>
+  </div>
+</div><script src="/js/injector.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":180,"height":400},"mobile":{"show":true}});</script></body>
+</html>
