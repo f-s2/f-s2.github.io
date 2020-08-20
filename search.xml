@@ -139,9 +139,12 @@
 <a id="more"></a>
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><p>在进行配置之前先要看好自己的版本号，不同的版本配置方法也有所区别</p>
-</li>
-<li><p>配置时，尽量走一步看一步，不一蹴而就，否则最后自己哪错了都不知道</p>
+<li>在进行配置之前先要看好自己的版本号，不同的版本配置方法也有所区别</li>
+<li>配置时，尽量走一步看一步，不一蹴而就，否则最后自己哪错了都不知道</li>
+<li>使用 githubpages 服务的无法在国内访问</li>
+<li>国内可用使用coding / gitee<ul>
+<li>使用 gitee 时，若是上传后发现网页没有更新，可以去 gitee pages 服务那里手动更新</li>
+</ul>
 </li>
 </ul>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
@@ -238,21 +241,17 @@
 
 <h4 id="样式美化"><a href="#样式美化" class="headerlink" title="样式美化"></a>样式美化</h4><p>在<strong>styls.styl</strong>中</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//美化打赏按钮的样式</span><br><span class="line">  <span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">35px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1.5px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">background</span>: <span class="number">#3f5973</span>;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">      <span class="attribute">border</span>: none;</span><br><span class="line">      <span class="attribute">color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">12</span>), <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">24</span>);</span><br><span class="line">    <span class="attribute">transition-delay</span>: <span class="number">0s</span>;</span><br><span class="line">      <span class="attribute">transition-duration</span>: .<span class="number">2s</span>;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.reward-container</span> <span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">8px</span> <span class="number">16px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">2</span>), <span class="number">0</span> <span class="number">6px</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">19</span>);</span><br><span class="line">      <span class="attribute">background</span>: <span class="number">#649ab6</span><span class="meta">!important</span>;</span><br><span class="line">      <span class="attribute">border</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.7em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">### 打开菜单数量显示</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>menu_settings:<br>  icons: true # 是否显示各个页面的图标<br>  badges: true # 是否显示分类/标签/归档页的内容量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 开启图片懒加载</span><br><span class="line"></span><br><span class="line">在**next.yml**中</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line"># Vanilla JavaScript plugin for lazyloading images.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;ApoorvSaxena&#x2F;lozad.js</span><br><span class="line">lazyload: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><p>在<strong>next.yml</strong>中（注意不能和 pjax 同时使用）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Quicklink Support</span><br><span class="line"># Do not enable both &#96;pjax&#96; and &#96;quicklink&#96;.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;GoogleChromeLabs&#x2F;quicklink</span><br><span class="line"># Front-matter (unsupport home archive).</span><br><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 
 
 
 </li>
 </ul>
-<h3 id="打开菜单数量显示"><a href="#打开菜单数量显示" class="headerlink" title="打开菜单数量显示"></a>打开菜单数量显示</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu_settings:</span><br><span class="line">  icons: true # 是否显示各个页面的图标</span><br><span class="line">  badges: true # 是否显示分类&#x2F;标签&#x2F;归档页的内容量</span><br></pre></td></tr></table></figure>
-
-<h3 id="开启图片懒加载"><a href="#开启图片懒加载" class="headerlink" title="开启图片懒加载"></a>开启图片懒加载</h3><p>  在<strong>next.yml</strong>中</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># Vanilla JavaScript plugin for lazyloading images.</span><br><span class="line"># For more information: https://github.com/ApoorvSaxena/lozad.js</span><br><span class="line">lazyload: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><p>  在<strong>next.yml</strong>中（注意不能和 pjax 同时使用）</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Quicklink Support</span><br><span class="line"># Do not enable both &#96;pjax&#96; and &#96;quicklink&#96;.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;GoogleChromeLabs&#x2F;quicklink</span><br><span class="line"># Front-matter (unsupport home archive).</span><br><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-
-
 <h3 id="更改标签样式"><a href="#更改标签样式" class="headerlink" title="更改标签样式"></a>更改标签样式</h3><p>  将标签前的 <code>#</code>改为图标，在 next.yml 中</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Use icon instead of the symbol # to indicate the tag at the bottom of the post</span><br><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
 
