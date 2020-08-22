@@ -181,6 +181,13 @@
   </url>
   
   <url>
+    <loc>https://f-s2.gitee.io/categories/%E5%AD%A6%E4%B9%A0/markdown/</loc>
+    <lastmod>2020-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://f-s2.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2020-08-22</lastmod>
     <changefreq>daily</changefreq>
@@ -188,7 +195,7 @@
   </url>
   
   <url>
-    <loc>https://f-s2.gitee.io/categories/%E5%AD%A6%E4%B9%A0/markdown/</loc>
+    <loc>https://f-s2.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/next%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -210,13 +217,6 @@
   
   <url>
     <loc>https://f-s2.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/</loc>
-    <lastmod>2020-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://f-s2.gitee.io/categories/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/next%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
