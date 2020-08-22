@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>markdown初体验</title>
+    <title>markdown</title>
     <url>/posts/a675233b/</url>
-    <content><![CDATA[<p>第一次使用markdown，感觉真香哎</p>
+    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
+
+<p>第一次使用markdown，感觉用着还不错</p>
 <a id="more"></a>
 
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
@@ -101,6 +103,10 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 正文标题区: #write */</span></span><br><span class="line"><span class="comment">/* [TOC]目录树区: .md-toc-content */</span></span><br><span class="line"><span class="comment">/* 侧边栏的目录大纲区: .sidebar-content */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/** initialize css counter */</span></span><br><span class="line"><span class="selector-id">#write</span>, <span class="selector-class">.sidebar-content</span>,<span class="selector-class">.md-toc-content</span>&#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span>, <span class="selector-class">.outline-h1</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h1</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span>, <span class="selector-class">.outline-h2</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h2</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h3</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span>, <span class="selector-class">.outline-h3</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h3</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span>, <span class="selector-class">.outline-h4</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h4</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h5</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span>, <span class="selector-class">.outline-h5</span>, <span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h5</span> &#123;</span><br><span class="line">    <span class="attribute">counter-reset</span>: h6</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** put counter result into headings */</span></span><br><span class="line"><span class="comment">/* 一级标题不展示 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h1</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h1</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="comment">/* counter-increment: h1;</span></span><br><span class="line"><span class="comment">    content: counter(h1) &quot;. &quot; */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 二级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h2</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h2</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h2;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.   &quot;</span>;</span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;. &quot; */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 三级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>, <span class="comment">/** override the default style for focused headings */</span></span><br><span class="line"><span class="selector-class">.outline-h3</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h3</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h3;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 四级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h4</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h4</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h4;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 五级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h5</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h5</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h5;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h5) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 六级标题 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h6</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-class">.md-heading</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.outline-h6</span>&gt;<span class="selector-class">.outline-item</span>&gt;<span class="selector-class">.outline-label</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.md-toc-item</span><span class="selector-class">.md-toc-h6</span>&gt;<span class="selector-class">.md-toc-inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">counter-increment</span>: h6;</span><br><span class="line">    <span class="comment">/* content: counter(h1) &quot;.&quot; counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;.&quot; counter(h6) &quot;. &quot; */</span></span><br><span class="line">    <span class="comment">/* content: counter(h2) &quot;.&quot; counter(h3) &quot;.&quot; counter(h4) &quot;.&quot; counter(h5) &quot;.&quot; counter(h6) &quot;. &quot; */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">counter</span>(h2) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h3) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h4) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h5) <span class="string">&quot;.&quot;</span> <span class="built_in">counter</span>(h6) <span class="string">&quot;   &quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** override the default style for focused headings */</span></span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#write</span>&gt;<span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h3</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h4</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h5</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-tag">h6</span><span class="selector-class">.md-focus</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: inherit;</span><br><span class="line">    <span class="attribute">border</span>: inherit;</span><br><span class="line">    <span class="attribute">border-radius</span>: inherit;</span><br><span class="line">    <span class="attribute">position</span>: inherit;</span><br><span class="line">    <span class="attribute">left</span>:initial;</span><br><span class="line">    <span class="attribute">float</span>: none;</span><br><span class="line">    <span class="attribute">top</span>:initial;</span><br><span class="line">    <span class="attribute">font-size</span>: inherit;</span><br><span class="line">    <span class="attribute">padding-left</span>: inherit;</span><br><span class="line">    <span class="attribute">padding-right</span>: inherit;</span><br><span class="line">    <span class="attribute">vertical-align</span>: inherit;</span><br><span class="line">    <span class="attribute">font-weight</span>: inherit;</span><br><span class="line">    <span class="attribute">line-height</span>: inherit;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置行距 */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 设置一级标题行距 */</span></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h3</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h4</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#write</span> <span class="selector-tag">h5</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>:<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="给文字添加样式"><a href="#给文字添加样式" class="headerlink" title="给文字添加样式"></a>给文字添加样式</h3><p>因为markdown是支持html的，利用这一点，就可以使用相应的html代码来丰富样式</p>
+<p>如：</p>
+<p><code>&lt;font color=&quot;#0cf&quot;&gt;test&lt;/font&gt;</code></p>
+<p><font color="#0cf">test</font></p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -114,12 +120,19 @@
   <entry>
     <title>next踩坑记录</title>
     <url>/posts/2e8f040/</url>
-    <content><![CDATA[<p>此贴专门用于记录next使用过程中所遇到的bug</p>
+    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
+
+<p>此贴专门用于记录next使用过程中所遇到的bug</p>
 <a id="more"></a>
 
-<p><strong><code>valine</code>评论板块突然就不加载了</strong></p>
-<p>原因：在修改valine相关配置时，不小心少打了一个空格，emmm</p>
+<h2 id="valine评论板块突然就不加载了"><a href="#valine评论板块突然就不加载了" class="headerlink" title="valine评论板块突然就不加载了"></a><strong><code>valine</code>评论板块突然就不加载了</strong></h2><p>原因：在修改valine相关配置时，不小心少打了一个空格，emmm</p>
 <p>就是说**”#”两边要注意留空格**</p>
+<h2 id="博客中的网络图片有时无法加载"><a href="#博客中的网络图片有时无法加载" class="headerlink" title="博客中的网络图片有时无法加载"></a>博客中的网络图片有时无法加载</h2><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在博客头部添加<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</code>即可</p>
+<p>如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20190721223929809.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="图片"></p>
+<h3 id="解决方法参考"><a href="#解决方法参考" class="headerlink" title="解决方法参考"></a>解决方法参考</h3><p><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/96770756">解决Hexo博客引用网络图片无法显示的问题</a></p>
+<h3 id="referrer是啥？"><a href="#referrer是啥？" class="headerlink" title="referrer是啥？"></a>referrer是啥？</h3><p>看这里<a href="https://segmentfault.com/a/1190000017896469">referrer策略和meta标签的问题</a></p>
+<h2 id="使用fancybox时，它会自动渲染图片标题"><a href="#使用fancybox时，它会自动渲染图片标题" class="headerlink" title="使用fancybox时，它会自动渲染图片标题"></a>使用fancybox时，它会自动渲染图片标题</h2><p>看这里<a href="https://wylu.me/posts/7bd83fc5/">Hexo NexT 图片caption出现多次</a></p>
 ]]></content>
       <categories>
         <category>博客优化</category>
@@ -128,6 +141,212 @@
       <tags>
         <tag>next</tag>
         <tag>踩坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搜索技巧</title>
+    <url>/posts/982ff584/</url>
+    <content><![CDATA[<p>生活中经常需要用到到搜索引擎，稍微了解一些技巧能够帮助我们更快的搜索出结果，何乐而不为呢</p>
+<a id="more"></a>
+
+<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">语法</th>
+<th align="left">语法说明</th>
+<th align="left">示例</th>
+<th align="left">示例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="left"><strong>+</strong></td>
+<td align="left">同AND，搜索包含多个关键词的结果</td>
+<td align="left">搜索 + 引擎</td>
+<td align="left">搜索包含【搜索】和【引擎】两个词的页面</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><strong>OR</strong></td>
+<td align="left">或者</td>
+<td align="left">搜索 OR 引擎</td>
+<td align="left">搜索包含【搜索】或【引擎】两个词的页面</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><strong>-</strong></td>
+<td align="left">减号，不包含减号后面词的页面</td>
+<td align="left">搜索引擎 -百度</td>
+<td align="left">搜索不包括【百度】的【搜索引擎】的页面</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><strong>“”</strong></td>
+<td align="left">双引号，精确匹配</td>
+<td align="left">“搜索引擎”</td>
+<td align="left">精确匹配【搜索引擎】这个关键词的页面</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">*****</td>
+<td align="left">星号，通配符，模糊搜索，星号代替某个字</td>
+<td align="left">搜*引擎</td>
+<td align="left">星号可以为任何字</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="left"><strong>..</strong></td>
+<td align="left">两个点，在两个数字之间加上.. 在数字范围内执行搜索</td>
+<td align="left">camera 500..500..1000</td>
+<td align="left">搜索500−1000−1000的camera</td>
+</tr>
+</tbody></table>
+<h3 id="高级命令"><a href="#高级命令" class="headerlink" title="高级命令"></a>高级命令</h3><table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">语法</th>
+<th align="left">语法说明</th>
+<th align="left">示例</th>
+<th align="left">示例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>filetype</strong></td>
+<td align="left">搜索某一种文件类型的资源</td>
+<td align="left">C++ filetype:pdf</td>
+<td align="left">搜索类型为pdf的C++网页资源</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>site</strong></td>
+<td align="left">在指定站点搜索</td>
+<td align="left">C++ site:<a href="https://www.zhihu.com/">https://www.zhihu.com</a></td>
+<td align="left">在知乎中搜索和C++相关的网页</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>info</strong></td>
+<td align="left">在网址前加info:，获取网站详情</td>
+<td align="left">info:github.com</td>
+<td align="left">搜索github网站详情</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>related</strong></td>
+<td align="left">搜索与某个网站有关联的页面</td>
+<td align="left">related:sina.com</td>
+<td align="left">和新浪网网站结构内容相似的一些其它网站</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>link</strong></td>
+<td align="left">返回所有链接到某个URL地址的网页</td>
+<td align="left">link:<a href="http://www.csdn.net/">www.csdn.net</a></td>
+<td align="left">搜索所有含指向【<a href="http://www.csdn.net】链接的网页/">www.csdn.net】链接的网页</a></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>inurl</strong></td>
+<td align="left">搜索查询词出现在url 中的页面</td>
+<td align="left">inurl:搜索引擎</td>
+<td align="left">搜索链接url中有【搜索引擎】的网页</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>intitle</strong></td>
+<td align="left">搜索查询词出现在页面标题(title)中的页面，支持中文和英文</td>
+<td align="left">intitle:搜索引擎</td>
+<td align="left">搜索页面标题中有【搜索引擎】的网页</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><strong>intext</strong></td>
+<td align="left">搜索查询词出现在页面正文(title)中的页面，支持中文和英文</td>
+<td align="left">SEO intext:搜索引擎</td>
+<td align="left">在正文包含【搜索引擎】的网页中搜索【SEO】</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><strong>inanchor</strong></td>
+<td align="left">搜索链接锚文字(即链接显示的文字)中包含搜索词的页面</td>
+<td align="left">inanchor:前端</td>
+<td align="left">搜索链接锚文字中包含【前端】的页面</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left"><strong>allinurl</strong></td>
+<td align="left">即all+inurl 页面url中包含多个关键词的页面</td>
+<td align="left">allinurl:SEO 搜索引擎优化</td>
+<td align="left">相当于 ：inurl:SEO inurl:搜索引擎优化</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left"><strong>allintitle</strong></td>
+<td align="left">即all+intitle 页面标题中包含多个关键词的页面</td>
+<td align="left">allintitle:SEO 搜索引擎优化</td>
+<td align="left">相当于：intitle:SEO intitle:搜索引擎优化</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left"><strong>allintext</strong></td>
+<td align="left">即all+inanchor 页面正文包含多个关键词的页面</td>
+<td align="left">allintext:SEO 搜索引擎优化</td>
+<td align="left">相当于：intext:SEO intext:搜索引擎优化</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left"><strong>allinanchor</strong></td>
+<td align="left">即all+inanchor 页面链接锚文字包含多个关键词的页面</td>
+<td align="left">allinanchor:SEO 搜索引擎优化</td>
+<td align="left">相当于：inanchor:SEO inanchor:搜索引擎优化</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left"><strong>weather</strong></td>
+<td align="left">weather/time/sunrise/sundown+城市名，返回城市的天气/时间/日出时间/日落时间</td>
+<td align="left">weather:beijing</td>
+<td align="left">显示北京的天气</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left"><strong>music</strong></td>
+<td align="left">或者用songs，歌手名字+music/songs</td>
+<td align="left">周杰伦 music</td>
+<td align="left">返回周杰伦的各首歌曲</td>
+</tr>
+</tbody></table>
+<h3 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h3><p>如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allintitle:机器学习 入门 site:zhihu.com</span><br></pre></td></tr></table></figure>
+
+<p>可以搜索到知乎上所有标题中有机器学习和入门的网页</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>冒号均为英文</li>
+<li>冒号后面没有空格</li>
+<li>命令前要用空格隔开，如:<em>C++ filetype:pdf，filetype前面有空格；</em></li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://evanli.github.io/blog/2019/01/26/advanced-google-search-engine-command/">谷歌搜索引擎高级搜索、命令大全表格总结(完整示例及说明)</a></p>
+<h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><p>百度的语法与Google大同小异参考Google的即可</p>
+<h2 id="比较懒的可以用快捷方式"><a href="#比较懒的可以用快捷方式" class="headerlink" title="比较懒的可以用快捷方式"></a>比较懒的可以用快捷方式</h2><h3 id="Google-1"><a href="#Google-1" class="headerlink" title="Google"></a>Google</h3><ul>
+<li>搜索框下面一点点的位置 — 设置 — 高级搜索</li>
+<li>访问该网址<a href="https://www.google.com/advanced_search">https://www.google.com/advanced_search</a></li>
+</ul>
+<h3 id="百度-1"><a href="#百度-1" class="headerlink" title="百度"></a>百度</h3><ul>
+<li><p>百度搜索导航栏右上角 — 设置 — 高级搜索</p>
+</li>
+<li><p>访问该网址<a href="http://www.baidu.com/gaoji/advanced.html">http://www.baidu.com/gaoji/advanced.html</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技能点</category>
+        <category>搜索工具使用</category>
+      </categories>
+      <tags>
+        <tag>google的使用</tag>
+        <tag>百度的使用</tag>
       </tags>
   </entry>
   <entry>
