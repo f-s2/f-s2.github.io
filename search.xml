@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>markdown初体验</title>
     <url>/posts/a675233b/</url>
     <content><![CDATA[<p>第一次使用markdown，感觉真香哎</p>
@@ -148,6 +128,43 @@
       <tags>
         <tag>next</tag>
         <tag>踩坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next配置(进阶版)</title>
+    <url>/posts/70d90ccb/</url>
+    <content><![CDATA[<p>由于版本更新等原因，网上好多教程都过期了，还得自己慢慢摸索，哎</p>
+<a id="more"></a>
+
+<h2 id="让百度收录博客"><a href="#让百度收录博客" class="headerlink" title="让百度收录博客"></a>让百度收录博客</h2><h3 id="添加网站验证"><a href="#添加网站验证" class="headerlink" title="添加网站验证"></a>添加网站验证</h3><ul>
+<li>百度搜索博客地址</li>
+</ul>
+<img data-src="https://img-blog.csdnimg.cn/20200505210520734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpYW5nbGxoYWhhaGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" style="zoom: 33%;" />
+
+<ul>
+<li><p>点击提交网址，在用户中心、站点管理中添加网站</p>
+</li>
+<li><p>按照提示去填写相应信息</p>
+</li>
+<li><p>在进行验证方式时有三种</p>
+<ul>
+<li>文件验证：下载给定的文件，将其放到本地主题目录 source 文件夹，然后部署博客完成验证（据说hexo可能会将其该文件渲染出来）</li>
+<li>HTML标签验证：将其放在<code>hexo/source/_data/head.swig</code>中，重新部署即可</li>
+<li>CNAME验证：需要登录域名提供商或托管服务提供商的网站，添加新的DNS记录。如果你购买了域名，这种方式最简单，只需去域名 DNS 添加一个<code>CNAME</code>记录即可完成验证</li>
+</ul>
+</li>
+<li><p>接下来只要等待验证结果了</p>
+</li>
+</ul>
+<h3 id="让百度能够搜到你"><a href="#让百度能够搜到你" class="headerlink" title="让百度能够搜到你"></a>让百度能够搜到你</h3><p>点击侧边栏的资源提交、普通收录，共有多种方法，目前暂未成功0.0</p>
+]]></content>
+      <categories>
+        <category>博客优化</category>
+        <category>next配置(进阶版)</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>博客优化</tag>
       </tags>
   </entry>
   <entry>
@@ -320,29 +337,25 @@
 
 
 <h3 id="评论功能（样式待更新）"><a href="#评论功能（样式待更新）" class="headerlink" title="评论功能（样式待更新）"></a>评论功能（样式待更新）</h3><ul>
-<li><p>在 learnclound 注册并创建应用</p>
-</li>
-<li><p>获取应用的 appid、appkey</p>
-</li>
-<li><p>修改 <strong>next.yml</strong></p>
+<li>在 learnclound 注册并创建应用</li>
+<li>获取应用的 appid、appkey</li>
+<li>修改 <strong>next.yml</strong></li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid: xxx</span><br><span class="line">  appkey: xxx</span><br><span class="line">  notify: false # Mail notifier</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: 来搞点事情吧 # Comment box placeholder</span><br><span class="line">  avatar: mm # Gravatar style</span><br><span class="line">  guest_info: nick,mail,link # Custom comment header</span><br><span class="line">  pageSize: 10 # Pagination size</span><br><span class="line">  language: zh-cn # Language, available values: en, zh-cn</span><br><span class="line">  visitor: false # Article reading statistic</span><br><span class="line">  comment_count: true # If false, comment count will only be displayed in post page, not in home page</span><br><span class="line">  recordIP: false # Whether to record the commenter IP</span><br><span class="line">  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)</span><br><span class="line">  #post_meta_order: 0</span><br></pre></td></tr></table></figure>
 
 <h3 id="相关文章推荐（待更新）"><a href="#相关文章推荐（待更新）" class="headerlink" title="相关文章推荐（待更新）"></a>相关文章推荐（待更新）</h3><h3 id="打赏配置"><a href="#打赏配置" class="headerlink" title="打赏配置"></a>打赏配置</h3><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p><strong>next.yml</strong>中</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Reward (Donate)</span><br><span class="line"># 打赏设置</span><br><span class="line">reward_settings:</span><br><span class="line">  # If true, reward would be displayed in every article by default.</span><br><span class="line">  # You can show or hide reward in a specific article throuth &#96;reward: true | false&#96; in Front-matter.</span><br><span class="line">  enable: true # 功能开关</span><br><span class="line">  animation: true # 动画</span><br><span class="line">  #comment: Donate comment here.</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  #wechatpay: &#x2F;images&#x2F;wechatpay.png # 微信捐赠二维码图片</span><br><span class="line">  #alipay: &#x2F;images&#x2F;alipay.png # 支付宝捐赠二维码图片</span><br><span class="line">#bitcoin: &#x2F;images&#x2F;bitcoin.png # 比特币</span><br></pre></td></tr></table></figure>
 
 <h4 id="样式美化"><a href="#样式美化" class="headerlink" title="样式美化"></a>样式美化</h4><p>在<strong>styls.styl</strong>中</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//美化打赏按钮的样式</span><br><span class="line">  <span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">35px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1.5px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">background</span>: <span class="number">#3f5973</span>;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">      <span class="attribute">border</span>: none;</span><br><span class="line">      <span class="attribute">color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">12</span>), <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">24</span>);</span><br><span class="line">    <span class="attribute">transition-delay</span>: <span class="number">0s</span>;</span><br><span class="line">      <span class="attribute">transition-duration</span>: .<span class="number">2s</span>;</span><br><span class="line">    <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.reward-container</span> <span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">8px</span> <span class="number">16px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">2</span>), <span class="number">0</span> <span class="number">6px</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">19</span>);</span><br><span class="line">      <span class="attribute">background</span>: <span class="number">#649ab6</span><span class="meta">!important</span>;</span><br><span class="line">      <span class="attribute">border</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.7em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//美化打赏按钮的样式</span><br><span class="line"><span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">35px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1.5px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#3f5973</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">12</span>), <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">24</span>);</span><br><span class="line">  <span class="attribute">transition-delay</span>: <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: .<span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">transition-timing-function</span>: ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.reward-container</span> <span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">8px</span> <span class="number">16px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">2</span>), <span class="number">0</span> <span class="number">6px</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">19</span>);</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#649ab6</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.reward-container</span> <span class="selector-tag">button</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.7em</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">### 打开菜单数量显示</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-<p>menu_settings:<br>  icons: true # 是否显示各个页面的图标<br>  badges: true # 是否显示分类/标签/归档页的内容量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 开启图片懒加载</span><br><span class="line"></span><br><span class="line">在**next.yml**中</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line"># Vanilla JavaScript plugin for lazyloading images.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;ApoorvSaxena&#x2F;lozad.js</span><br><span class="line">lazyload: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><p>在<strong>next.yml</strong>中（注意不能和 pjax 同时使用）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Quicklink Support</span><br><span class="line"># Do not enable both &#96;pjax&#96; and &#96;quicklink&#96;.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;GoogleChromeLabs&#x2F;quicklink</span><br><span class="line"># Front-matter (unsupport home archive).</span><br><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<p>  menu_settings:<br>    icons: true # 是否显示各个页面的图标<br>    badges: true # 是否显示分类/标签/归档页的内容量<br>  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 开启图片懒加载</span><br><span class="line"></span><br><span class="line">在**next.yml**中</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line"># Vanilla JavaScript plugin for lazyloading images.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;ApoorvSaxena&#x2F;lozad.js</span><br><span class="line">lazyload: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><p>  在<strong>next.yml</strong>中（注意不能和 pjax 同时使用）</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Quicklink Support</span><br><span class="line"># Do not enable both &#96;pjax&#96; and &#96;quicklink&#96;.</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;GoogleChromeLabs&#x2F;quicklink</span><br><span class="line"># Front-matter (unsupport home archive).</span><br><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ul>
 <h3 id="更改标签样式"><a href="#更改标签样式" class="headerlink" title="更改标签样式"></a>更改标签样式</h3><p>  将标签前的 <code>#</code>改为图标，在 next.yml 中</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Use icon instead of the symbol # to indicate the tag at the bottom of the post</span><br><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
 
